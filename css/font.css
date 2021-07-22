@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(../font/BarlowSemiCondensed-Thin.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(../font/BarlowSemiCondensed-ExtraLight.ttf);
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(../font/BarlowSemiCondensed-Light.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(../font/BarlowSemiCondensed-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(../font/BarlowSemiCondensed-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(../font/BarlowSemiCondensed-SemiBold.ttf);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(../font/BarlowSemiCondensed-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(../font/BarlowSemiCondensed-ExtraBold.ttf);
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(../font/BarlowSemiCondensed-Black.ttf);
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "NanumSquare";
+  src: url(../font/NanumSquareL.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "NanumSquare";
+  src: url(../font/NanumSquareR.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "NanumSquare";
+  src: url(../font/NanumSquareB.ttf);
+  font-style: bold;
+  font-weight: 700;
+}
