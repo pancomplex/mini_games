@@ -19,22 +19,23 @@ $.ajax({
     });
 
     let score = 0;
-    let aa = null;
+    let failTime = null;
     let selected = new Array();
     let delay = false;
     $(".cardList li").on("click", function () {
       let opened = $(this).find(".front").hasClass("face");
       if (!delay && !opened) {
         console.log("clicked");
-        let i = $(this).index();
 
+        let i = $(this).index();
         select(i);
-        clearTimeout(aa);
       }
     });
 
     function select(i) {
       if (!selected[1]) {
+        clearTimeout(failTime);
+
         selected.push(i);
         $(".cardList li").eq(i).find(".front").addClass("face").siblings().removeClass("face");
 
@@ -46,17 +47,22 @@ $.ajax({
           } else {
             console.log("불일치");
             delay = true;
-            aa = setTimeout(function () {
-              $.each(selected, function (i, item) {
-                $(".cardList li")
-                  .eq(item)
-                  .find(".back")
-                  .addClass("face")
-                  .siblings()
-                  .removeClass("face");
-              });
+
+            new Promise(function (resolve, reject) {
+              failTime = setTimeout(function () {
+                $.each(selected, function (i, item) {
+                  $(".cardList li")
+                    .eq(item)
+                    .find(".back")
+                    .addClass("face")
+                    .siblings()
+                    .removeClass("face");
+                });
+              }, 1000);
+              resolve();
+            }).then(() => {
               emptySelected();
-            }, 1000);
+            }); // Promise 문법 공부 필요... 그전까진 오작동
           }
           function emptySelected() {
             if (selected[1]) selected = [];
