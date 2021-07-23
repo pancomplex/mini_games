@@ -19,7 +19,7 @@ $.ajax({
     });
 
     let score = 0;
-
+    let aa = null;
     let selected = new Array();
     let delay = false;
     $(".cardList li").on("click", function () {
@@ -29,36 +29,39 @@ $.ajax({
         let i = $(this).index();
 
         select(i);
+        clearTimeout(aa);
       }
     });
+
     function select(i) {
       if (!selected[1]) {
         selected.push(i);
         $(".cardList li").eq(i).find(".front").addClass("face").siblings().removeClass("face");
 
-        if (cards[selected[0]].name == cards[selected[1]].name) {
-          console.log("일치");
-          score++;
-          console.log("🚀 ~ file: card_game.js ~ line 22 ~ score", score);
-          emptySelected();
-        } else {
-          console.log("불일치");
-          setTimeout(function () {
-            delay = true;
-            $.each(selected, function (i, item) {
-              $(".cardList li")
-                .eq(item)
-                .find(".back")
-                .addClass("face")
-                .siblings()
-                .removeClass("face");
-            });
+        if (selected[1]) {
+          if (cards[selected[0]].name == cards[selected[1]].name) {
+            console.log("일치");
+            score++;
             emptySelected();
-          }, 1000);
-        }
-        function emptySelected() {
-          if (selected[1]) selected = [];
-          delay = false;
+          } else {
+            console.log("불일치");
+            delay = true;
+            aa = setTimeout(function () {
+              $.each(selected, function (i, item) {
+                $(".cardList li")
+                  .eq(item)
+                  .find(".back")
+                  .addClass("face")
+                  .siblings()
+                  .removeClass("face");
+              });
+              emptySelected();
+            }, 1000);
+          }
+          function emptySelected() {
+            if (selected[1]) selected = [];
+            delay = false;
+          }
         }
       }
     }
