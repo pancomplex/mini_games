@@ -1,0 +1,19 @@
+#main #result ul { width: 600px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; font-size: 2rem; font-weight: bold; color: #fff; }
+
+#main #result ul li { display: flex; justify-content: center; align-items: center; width: 80px; height: 80px; border-radius: 40px; margin: 10px; }
+
+#main #result ul li:nth-child(1) { background-color: #52b69a; }
+
+#main #result ul li:nth-child(2) { background-color: #34a0a4; }
+
+#main #result ul li:nth-child(3) { background-color: #168aad; }
+
+#main #result ul li:nth-child(4) { background-color: #1a759f; }
+
+#main #result ul li:nth-child(5) { background-color: #1e6091; }
+
+#main #result ul li:nth-child(6) { background-color: #184e77; }
+
+.reset { margin-top: 30px; width: 200px; height: 40px; border-radius: 20px; display: flex; justify-content: center; align-items: center; background-color: #fff; color: #333; }
+
+#selectGame { position: fixed; top: 45px; right: calc(50% - 300px); width: 100px; height: 30px; font-family: "NanumSquare", sans-serif; }

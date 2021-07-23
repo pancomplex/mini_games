@@ -1,0 +1,15 @@
+.cardList { display: flex; justify-content: center; flex-wrap: wrap; width: 1280px; }
+
+.cardList li { width: 150px; height: 200px; margin: 5px; background-color: #fff; position: relative; cursor: pointer; }
+
+.cardList li div { width: inherit; height: inherit; display: none; }
+
+.cardList li div.face { display: flex; }
+
+.cardList li .front { flex-direction: column; justify-content: center; align-items: center; }
+
+.cardList li .front img { width: 80%; }
+
+.cardList li .front .title { position: absolute; bottom: 10px; text-align: center; display: flex; justify-content: center; align-items: center; height: 20px; padding: 0 10px; border-radius: 10px; font-weight: bold; color: #333; background-color: #fff; }
+
+.cardList li .back { background-color: #111; }

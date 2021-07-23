@@ -1,0 +1,17 @@
+{
+  "path": "../../images/card_game/",
+  "cards": [
+    { "name": "mouse", "img": "mouse.svg" },
+    { "name": "cow", "img": "cow.svg" },
+    { "name": "tiger", "img": "tiger.svg" },
+    { "name": "rabbit", "img": "rabbit.svg" },
+    { "name": "dragon", "img": "dragon.svg" },
+    { "name": "snake", "img": "snake.svg" },
+    { "name": "horse", "img": "horse.svg" },
+    { "name": "sheep", "img": "sheep.svg" },
+    { "name": "monkey", "img": "monkey.svg" },
+    { "name": "chicken", "img": "chicken.svg" },
+    { "name": "dog", "img": "dog.svg" },
+    { "name": "pig", "img": "pig.svg" }
+  ]
+}

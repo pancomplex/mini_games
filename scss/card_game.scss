@@ -1,0 +1,48 @@
+.cardList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1280px;
+  li {
+    width: 150px;
+    height: 200px;
+    margin: 5px;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    div {
+      width: inherit;
+      height: inherit;
+      display: none;
+      &.face {
+        display: flex;
+      }
+    }
+
+    .front {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 80%;
+      }
+      .title {
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        padding: 0 10px;
+        border-radius: 10px;
+        font-weight: bold;
+        color: #333;
+        background-color: #fff;
+      }
+    }
+    .back {
+      background-color: #111;
+    }
+  }
+}
